@@ -1,19 +1,22 @@
-# Mailspring Theme Starter
+# daetherius Mailspring Theme
 
-The Mailspring Theme Starter is a basic starting point for creating a theme for
-the [Mailspring](http://www.getmailspring.com/) email client.
+Theme for [Mailspring](http://www.getmailspring.com/) email client.
 
-<img src="https://raw.githubusercontent.com/Foundry376/Mailspring-Theme-Starter/master/screenshot/custom-theme.png" />
+![theme-snapshot-1](https://raw.githubusercontent.com/dportalesr/daetherius-mailspring-theme/master/screenshot/theme-1.png)
 
-## Getting Started
+![theme-snapshot-1](https://raw.githubusercontent.com/dportalesr/daetherius-mailspring-theme/master/screenshot/theme-2.png)
 
-Creating a new theme in Mailspring is easy! Here's how you can do it.
+![theme-snapshot-1](https://raw.githubusercontent.com/dportalesr/daetherius-mailspring-theme/master/screenshot/theme-3.png)
+
+## Customization
+
+Modifying a theme in Mailspring is easy! Here's how you can do it.
 
 1. Fork this repo or download the code. Add a name, display name, title, and
    description for your theme to `package.json`, and change the directory name
    to match.
 
-2. Open N1 and install the theme by going to `Mailspring > Install New Theme...`
+2. Open Mailspring and install the theme by going to `Mailspring > Install New Theme...`
    and selecting the directory.
 
 3. Choose `Developer > Run With Debug Flags` for easier debugging.
