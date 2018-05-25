@@ -4,49 +4,88 @@ https://github.com/Foundry376/Mailspring/blob/master/app/static/base/ui-variable
 */
 @import "base/ui-variables";
 
-@gray-base: #ffffff;
-@gray-darker: darken(@gray-base, 13.5%);
-@gray-dark: darken(@gray-base, 20%);
-@gray: darken(@gray-base, 33.5%);
-@gray-light: darken(@gray-base, 46.7%);
-@gray-lighter: darken(@gray-base, 92.5%);
-@white: #0a0a0a;
+@background-color-success: #009ec4;
+@background-color-error: #f15f4b;
 
-@accent-primary: #58b660;
-@accent-primary-dark: darken(@accent-primary, 10%);
+@font-family-sans-serif: "Open Sans", "Helvetica", sans-serif;
+@font-weight-bolder: 800;
 
-@background-primary: #212121;
-@background-off-primary: #212121;
-@background-secondary: #121212;
-@background-tertiary: #6d7987;
+html, body, div, p, span {
+  -webkit-font-smoothing: auto !important;
+}
 
-@border-color-primary: lighten(@background-primary, 10%);
-@border-color-secondary: lighten(@background-secondary, 10%);
-@border-color-tertiary: lighten(@background-tertiary, 10%);
-@border-color-divider: @border-color-secondary;
+.account-sidebar-sections .item,
+.thread-info-column,
+.list-item.list-tabular-item,
+.compose-body div[contenteditable] {
+  font-style: italic;
+}
 
-@text-color: #eee;
-@text-color-subtle: fadeout(@text-color, 20%);
-@text-color-very-subtle: fadeout(@text-color, 40%);
-@text-color-inverse: white;
-@text-color-inverse-subtle: fadeout(@text-color-inverse, 20%);
-@text-color-inverse-very-subtle: fadeout(@text-color-inverse, 50%);
-@text-color-heading: #fff;
+.account-sidebar-sections .item.selected .name {
+  font-weight: @font-weight-semi-bold;
+}
 
-@text-color-link: @accent-primary;
-@text-color-link-hover: @accent-primary-dark;
-@text-color-link-active: @accent-primary-dark;
+.list-container .list-item  {
+  font-weight: @font-weight-normal;
+}
 
-@btn-default-bg-color: lighten(@background-primary, 5%);
-@dropdown-default-bg-color: #404040;
+.list-container {
+  .list-item {
+    &:not(.unread) {
+      background-color: @gray-lighter;
 
-@input-bg: #2e2e2e;
-@input-border: @border-color-divider;
+      .participants, .subject, .snippet, .timestamp {
+        color: @gray;
+      }
+    }
+    &.unread {
+      .participants .unread-true, .subject {
+        font-weight: 700;
+      }
+    }
 
-@list-bg: #333;
-@list-border: #383838;
-@list-selected-color: @text-color-inverse;
-@list-focused-color: @text-color;
+    &.selected {
+    }
 
-@toolbar-background-color: #121212;
-@panel-background-color: #121212;
+    &:not(.unread), &.unread {
+      &:not(.focused):not(.selected):hover {
+          background-color: lighten(@blue, 32%);
+      }
+    }
+
+    &.focused, &.selected {
+      background-color: @blue-dark !important;
+
+      &:not(.unread), &.unread {
+        .participants, .subject, .snippet, .timestamp {
+          font-weight: @font-weight-semi-bold;
+          color: @white;
+        }
+      }
+    }
+  }
+}
+.thread-list .unread:not(.focused):not(.selected):hover,
+.draft-list .unread:not(.focused):not(.selected):hover {
+
+}
+
+.thread-list .list-item:not(.unread):not(.selected):not(.focused) {
+
+}
+
+.contenteditable-container {
+  font-size: 15px;
+}
+
+.column-MessageListSidebar {
+  display: none;
+}
+
+.notifications .notification {
+  font-size: 11px;
+}
+
+.mailspring-workspace {
+  font-family: @font-family-sans-serif;
+}
